@@ -1,0 +1,302 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #222;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 20px;
+}
+
+.nav-list li a, .nav-list li button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-list li button {
+    display: flex;
+    align-items: center;
+}
+
+.contact-card {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    height: auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+}
+
+.contact-card .btn-primary {
+    background-color: #00b894;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-card .btn-primary:hover {
+    background-color: #00a381;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-section {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    margin: 80px 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.intro-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro-content .highlight {
+    color: #00b894;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.intro-content .btn-primary {
+    background-color: #00b894;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.intro-content .btn-primary:hover {
+    background-color: #00a381;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.resume-grid, .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.resume-card, .service-card {
+    background: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.resume-card:hover, .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #444;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    background: #444;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #00b894;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #00a381;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode header {
+    background-color: #333;
+}
+
+body.light-mode footer {
+    background-color: #333;
+}
+
+body.light-mode nav ul li a, 
+body.light-mode nav ul li button {
+    color: white;
+}
+
+body.light-mode .intro-section {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .resume-card, 
+body.light-mode .service-card, 
+body.light-mode .skills-list li {
+    background: white;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .contact-form input, 
+body.light-mode .contact-form textarea {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .contact-card {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card, .intro-section, .section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-list img {
+    width: 24px; /* Adjust the size as needed */
+    height: auto;
+}

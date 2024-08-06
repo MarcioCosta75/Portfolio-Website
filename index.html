@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mário Costa - Portfolio</title>
+    <link rel="stylesheet" href="index_styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home" data-lang-en="Home" data-lang-pt="Início">Home</a></li>
+                <li><a href="#about" data-lang-en="About Me" data-lang-pt="Sobre Mim">About Me</a></li>
+                <li><a href="#resume" data-lang-en="Resume" data-lang-pt="Currículo">Resume</a></li>
+                <li><a href="#services" data-lang-en="Services" data-lang-pt="Serviços">Services</a></li>
+                <li><a href="#skills" data-lang-en="Skills" data-lang-pt="Competências">Skills</a></li>
+                <li><a href="#portfolio" data-lang-en="Portfolio" data-lang-pt="Portfólio">Portfolio</a></li>
+                <li><a href="#testimonials" data-lang-en="Testimonials" data-lang-pt="Testemunhos">Testimonials</a></li>
+                <li><a href="#contact" data-lang-en="Contact" data-lang-pt="Contato">Contact</a></li>
+                <li><button id="lang-switch"><img src="static/icons/gb.png" alt="EN" style="width: 24px; height: auto;"></button></li>
+                <li><button id="theme-switch"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-card">
+        <img src="static/me.jpg" alt="Mário Costa">
+        <h2>Mário Costa</h2>
+        <p data-lang-en="Based in Lisbon, Portugal" data-lang-pt="Baseado em Lisboa, Portugal">Based in Lisbon, Portugal</p>
+        <p>Email: marcio.jfp.costa@gmail.com</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/marciocosta" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/marciocosta" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/marciocosta" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="mailto:marcio.jfp.costa@gmail.com" class="btn-primary" data-lang-en="Let's Talk" data-lang-pt="Vamos Conversar">Let's Talk</a>
+    </div>
+
+    <section class="intro-section" id="home">
+        <div class="intro-content">
+            <h1>Hello, I'm <span class="highlight">Mário Costa</span>, a <br><span data-lang-en="Creative Technologies Student" data-lang-pt="Estudante de Tecnologias Criativas">Creative Technologies Student</span></h1>
+            <p data-lang-en="I love new challenges, especially helping companies solve their problems. It's in my nature..." data-lang-pt="Adoro novos desafios, especialmente ajudar as empresas a resolver os seus problemas. Está na minha natureza...">I love new challenges, especially helping companies solve their problems. It's in my nature...</p>
+            <a href="mailto:marcio.jfp.costa@gmail.com" class="btn-primary" data-lang-en="Let's Talk" data-lang-pt="Vamos Conversar">Let's Talk</a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 data-lang-en="About Me" data-lang-pt="Sobre Mim">About Me</h2>
+            <p data-lang-en="My name is Mário Costa, and I'm a Creative Technologies student and software developer based in Lisbon, Portugal." data-lang-pt="O meu nome é Mário Costa, e sou um estudante de Tecnologias Criativas e desenvolvedor de software baseado em Lisboa, Portugal.">My name is Mário Costa, and I'm a Creative Technologies student and software developer based in Lisbon, Portugal.</p>
+        </div>
+    </section>
+
+    <section class="section" id="resume">
+        <div class="container resume-grid">
+            <div class="resume-card">
+                <h3 data-lang-en="Experience" data-lang-pt="Experiência">Experience</h3>
+                <ul>
+                    <li> Dengun - Internship Trainee | Software Developer (Jul 2023 - Present)</li>
+                    <li> Platinuamauto.eu - Vehicle Preparation | After Sales Manager | Auto Parts Manager | Admin. Assistant | Online Media Marketing (Jan 2018 - Sept 2022)</li>
+                    <li> The Pátio Suite Hotel - Waiter & Bartender (Feb 2017 - Oct 2017)</li>
+                    <li> Nautic Drive - Algarve - Internship (2016, 8 Months)</li>
+                </ul>
+            </div>
+            <div class="resume-card">
+                <h3 data-lang-en="Education" data-lang-pt="Educação">Education</h3>
+                <ul>
+                    <li> IADE - Creative University - Global Bachelor's Degree in Creative Technologies (Sept 2022 - June 2025)</li>
+                    <li> SA Formação - Certified Modular Education with High School Equivalency (Feb 2021 - Jan 2023)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container services-grid">
+            <div class="service-card" data-lang-en="Automation & RPA" data-lang-pt="Automação e RPA">
+                <h3>Automation & RPA</h3>
+                <p data-lang-en="Developing and implementing robotic process automation solutions." data-lang-pt="Desenvolver e implementar soluções de automação de processos robóticos.">Developing and implementing robotic process automation solutions.</p>
+            </div>
+            <div class="service-card" data-lang-en="API Integration" data-lang-pt="Integração de API">
+                <h3>API Integration</h3>
+                <p data-lang-en="Integrating various APIs to enhance software functionality." data-lang-pt="Integrar várias APIs para melhorar a funcionalidade do software.">Integrating various APIs to enhance software functionality.</p>
+            </div>
+            <div class="service-card" data-lang-en="Artificial Intelligence" data-lang-pt="Inteligência Artificial">
+                <h3>Artificial Intelligence</h3>
+                <p data-lang-en="Applying AI solutions to solve complex problems and improve processes." data-lang-pt="Aplicar soluções de IA para resolver problemas complexos e melhorar processos.">Applying AI solutions to solve complex problems and improve processes.</p>
+            </div>
+            <div class="service-card" data-lang-en="Data Management" data-lang-pt="Gestão de Dados">
+                <h3>Data Management</h3>
+                <p data-lang-en="Managing and organizing data to ensure efficient access and use." data-lang-pt="Gerenciar e organizar dados para garantir acesso e uso eficientes.">Managing and organizing data to ensure efficient access and use.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="container">
+            <ul class="skills-list">
+                <li data-lang-en="React" data-lang-pt="React">React</li>
+                <li data-lang-en="Node.js" data-lang-pt="Node.js">Node.js</li>
+                <li data-lang-en="SQL" data-lang-pt="SQL">SQL</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="portfolio">
+        <div class="container">
+            <h2 data-lang-en="Portfolio" data-lang-pt="Portfólio">Portfolio</h2>
+            <p data-lang-en="Coming soon..." data-lang-pt="Em breve...">Coming soon...</p>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 data-lang-en="Testimonials" data-lang-pt="Testemunhos">Testimonials</h2>
+            <p data-lang-en="Coming soon..." data-lang-pt="Em breve...">Coming soon...</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 data-lang-en="Contact" data-lang-pt="Contato">Contact</h2>
+            <p data-lang-en="You can reach me at marcio.jfp.costa@gmail.com or through the form below." data-lang-pt="Pode entrar em contato comigo em marcio.jfp.costa@gmail.com ou via formulário abaixo.">You can reach me at marcio.jfp.costa@gmail.com or through the form below.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" data-lang-en="Your Name" data-lang-pt="Seu Nome">
+                <input type="email" placeholder="Your Email" data-lang-en="Your Email" data-lang-pt="Seu Email">
+                <textarea placeholder="Your Message" data-lang-en="Your Message" data-lang-pt="Sua Mensagem"></textarea>
+                <button type="submit" data-lang-en="Send Message" data-lang-pt="Enviar Mensagem">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Mário Costa</p>
+    </footer>
+
+    <script src="index_script.js"></script>
+</body>
+</html>
