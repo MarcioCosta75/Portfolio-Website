@@ -1,141 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mário Costa - Portfolio</title>
-    <link rel="stylesheet" href="index_styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Marcio Costa - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#home" data-lang-en="Home" data-lang-pt="Início">Home</a></li>
-                <li><a href="#about" data-lang-en="About Me" data-lang-pt="Sobre Mim">About Me</a></li>
-                <li><a href="#resume" data-lang-en="Resume" data-lang-pt="Currículo">Resume</a></li>
-                <li><a href="#services" data-lang-en="Services" data-lang-pt="Serviços">Services</a></li>
-                <li><a href="#skills" data-lang-en="Skills" data-lang-pt="Competências">Skills</a></li>
-                <li><a href="#portfolio" data-lang-en="Portfolio" data-lang-pt="Portfólio">Portfolio</a></li>
-                <li><a href="#testimonials" data-lang-en="Testimonials" data-lang-pt="Testemunhos">Testimonials</a></li>
-                <li><a href="#contact" data-lang-en="Contact" data-lang-pt="Contato">Contact</a></li>
-                <li><button id="lang-switch"><img src="static/icons/gb.png" alt="EN" style="width: 24px; height: auto;"></button></li>
-                <li><button id="theme-switch"><i class="fas fa-moon"></i></button></li>
+    <!-- Cabeçalho -->
+    <header class="header-hero">
+        <nav class="nav-hero">
+            <div class="logo">
+                <img src="static/logos/mc.png" alt="Logo Marcio Costa">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                    <img src="static/logos/instagram.png" alt="Instagram"> Instagram
+                </a></li>
+                <li><a href="https://discord.com" target="_blank">
+                    <img src="static/logos/discord.png" alt="Discord"> Discord
+                </a></li>
+                <li><a href="https://github.com/MarcioCosta75" target="_blank">
+                    <img src="static/logos/github.png" alt="GitHub"> GitHub
+                </a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="contact-card">
-        <img src="static/me.jpg" alt="Mário Costa">
-        <h2>Mário Costa</h2>
-        <p data-lang-en="Based in Lisbon, Portugal" data-lang-pt="Baseado em Lisboa, Portugal">Based in Lisbon, Portugal</p>
-        <p>Email: marcio.jfp.costa@gmail.com</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/marciocosta" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/marciocosta" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/marciocosta" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <a href="mailto:marcio.jfp.costa@gmail.com" class="btn-primary" data-lang-en="Let's Talk" data-lang-pt="Vamos Conversar">Let's Talk</a>
-    </div>
-
-    <section class="intro-section" id="home">
-        <div class="intro-content">
-            <h1>Hello, I'm <span class="highlight">Mário Costa</span>, a <br><span data-lang-en="Creative Technologies Student" data-lang-pt="Estudante de Tecnologias Criativas">Creative Technologies Student</span></h1>
-            <p data-lang-en="I love new challenges, especially helping companies solve their problems. It's in my nature..." data-lang-pt="Adoro novos desafios, especialmente ajudar as empresas a resolver os seus problemas. Está na minha natureza...">I love new challenges, especially helping companies solve their problems. It's in my nature...</p>
-            <a href="mailto:marcio.jfp.costa@gmail.com" class="btn-primary" data-lang-en="Let's Talk" data-lang-pt="Vamos Conversar">Let's Talk</a>
-        </div>
-    </section>
-
-    <section class="section" id="about">
-        <div class="container">
-            <h2 data-lang-en="About Me" data-lang-pt="Sobre Mim">About Me</h2>
-            <p data-lang-en="My name is Mário Costa, and I'm a Creative Technologies student and software developer based in Lisbon, Portugal." data-lang-pt="O meu nome é Mário Costa, e sou um estudante de Tecnologias Criativas e desenvolvedor de software baseado em Lisboa, Portugal.">My name is Mário Costa, and I'm a Creative Technologies student and software developer based in Lisbon, Portugal.</p>
-        </div>
-    </section>
-
-    <section class="section" id="resume">
-        <div class="container resume-grid">
-            <div class="resume-card">
-                <h3 data-lang-en="Experience" data-lang-pt="Experiência">Experience</h3>
-                <ul>
-                    <li> Dengun - Internship Trainee | Software Developer (Jul 2023 - Present)</li>
-                    <li> Platinuamauto.eu - Vehicle Preparation | After Sales Manager | Auto Parts Manager | Admin. Assistant | Online Media Marketing (Jan 2018 - Sept 2022)</li>
-                    <li> The Pátio Suite Hotel - Waiter & Bartender (Feb 2017 - Oct 2017)</li>
-                    <li> Nautic Drive - Algarve - Internship (2016, 8 Months)</li>
-                </ul>
+    <!-- Seção Hero -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="static/me.jpg" alt="Profile Image">
+                </div>
+                <div class="profile-info">
+                    <h2>Marcio Costa</h2>
+                    <p>Full-stack Developer</p>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> marcio.jfp.costa@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Portugal</li>
+                        <li><i class="fas fa-briefcase"></i> Full-time / Freelancer</li>
+                        <li><i class="fas fa-link"></i> www.marciocosta.dev</li>
+                    </ul>
+                    <div class="skills-badges">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>REACT</span>
+                    </div>
+                    <a href="static/cv/curriculum.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+                </div>
             </div>
-            <div class="resume-card">
-                <h3 data-lang-en="Education" data-lang-pt="Educação">Education</h3>
-                <ul>
-                    <li> IADE - Creative University - Global Bachelor's Degree in Creative Technologies (Sept 2022 - June 2025)</li>
-                    <li> SA Formação - Certified Modular Education with High School Equivalency (Feb 2021 - Jan 2023)</li>
-                </ul>
+            <div class="hero-title">
+                <h1>Software Engineer | Automation | AI</h1>  
+            </div>
+            <div class="hero-text">  
+                <h1>
+                    <pre class="code-tag">&lt;h1&gt;</pre>
+                    Hey<br>
+                    I’m <span>Márcio</span>,<br>
+                    Full-stack developer
+                    <pre class="code-tag">&lt;/h1&gt;</pre>
+                </h1>
+                
+                
+                <p>
+                    <pre class="code-tag">&lt;p&gt;</pre>
+                    <br>
+                    I help businesses grow by crafting amazing web experiences.<br>
+                    If you’re looking for a developer that likes to get stuff done,<br>
+                    <br>
+                    <pre class="code-tag">&lt;/p&gt;</pre>
+                </p>
+                
+                <a href="mailto:marcio.jfp.costa@gmail.com" class="contact-btn">
+                    Let’s Talk <img src="static/logos/emailButton.png" alt="email">
+                </a>
+            </div>            
+        </div>
+    </section>
+
+    <!-- Seção About Me -->
+    <section id="about-me" class="about-section">
+        <div class="about-container">
+            <div class="about-title">
+                <h2>&lt;About Me/&gt;</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="code-tag">&lt;p&gt;</p>
+                    <p class="highlight code-tag">Hello!</p>
+                    <p>
+                        My name is Marcio Costa and I specialize in web development that utilizes <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JS</span>, and <span class="highlight">REACT</span> etc.
+                    </p>
+                    <p>
+                        I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
+                    </p>
+                    <p>
+                        When I'm not coding, I am writing <a href="#blogs" class="highlight link">blogs</a>, reading, or picking up some new hands-on art projects like <a href="#" class="highlight link">photography</a>.
+                    </p>
+                    <p>
+                        I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                    </p>
+                    <p class="code-tag">&lt;/p&gt;</p>
+                </div>
+                <div class="about-image">
+                    <img src="static/images/image1.png" alt="Marcio Costa working on a laptop">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="services">
-        <div class="container services-grid">
-            <div class="service-card" data-lang-en="Automation & RPA" data-lang-pt="Automação e RPA">
-                <h3>Automation & RPA</h3>
-                <p data-lang-en="Developing and implementing robotic process automation solutions." data-lang-pt="Desenvolver e implementar soluções de automação de processos robóticos.">Developing and implementing robotic process automation solutions.</p>
+    <!-- Seção de Habilidades -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <p class="skills-subtitle">I am striving to never stop learning and improving</p>
+            <div class="skills-content">
+                <div class="skill-card">
+                    <img src="static/logos/skills/webDevelopment.png">
+                    <h3>Web Development</h3>
+                    <p>HTML • CSS • JS • REACT</p>
+                </div>
+                <div class="skill-card">
+                    <img src="static/logos/skills/appDevelopment.png">
+                    <h3>App Development</h3>
+                    <p>iOS • Android</p>
+                </div>
             </div>
-            <div class="service-card" data-lang-en="API Integration" data-lang-pt="Integração de API">
-                <h3>API Integration</h3>
-                <p data-lang-en="Integrating various APIs to enhance software functionality." data-lang-pt="Integrar várias APIs para melhorar a funcionalidade do software.">Integrating various APIs to enhance software functionality.</p>
+            <div class="skills-icons">
+                <div class="skill-icon">
+                    <img src="static/logos/skills/html.png" alt="HTML">
+                    <h4 style="color: #E54F26;">HTML</h4>
+                </div>
+                <div class="skill-icon">
+                    <img src="static/logos/skills/css.png" alt="CSS">
+                    <h4 style="color: #0C73B8;">CSS</h4>
+                </div>
+                <div class="skill-icon">
+                    <img src="static/logos/skills/js.png" alt="JS">
+                    <h4 style="color: #E7A020;">JS</h4>
+                </div>
+                <div class="skill-icon">
+                    <img src="static/logos/skills/react.png" alt="React">
+                    <h4 style="color: #28A9E0;">REACT</h4>
+                </div>
             </div>
-            <div class="service-card" data-lang-en="Artificial Intelligence" data-lang-pt="Inteligência Artificial">
-                <h3>Artificial Intelligence</h3>
-                <p data-lang-en="Applying AI solutions to solve complex problems and improve processes." data-lang-pt="Aplicar soluções de IA para resolver problemas complexos e melhorar processos.">Applying AI solutions to solve complex problems and improve processes.</p>
-            </div>
-            <div class="service-card" data-lang-en="Data Management" data-lang-pt="Gestão de Dados">
-                <h3>Data Management</h3>
-                <p data-lang-en="Managing and organizing data to ensure efficient access and use." data-lang-pt="Gerenciar e organizar dados para garantir acesso e uso eficientes.">Managing and organizing data to ensure efficient access and use.</p>
+            <div class="skills-tag">
+                <img src="static/others/tag.png" alt="Tag Icon" class="tag-icon">
             </div>
         </div>
     </section>
 
-    <section class="section" id="skills">
-        <div class="container">
-            <ul class="skills-list">
-                <li data-lang-en="React" data-lang-pt="React">React</li>
-                <li data-lang-en="Node.js" data-lang-pt="Node.js">Node.js</li>
-                <li data-lang-en="SQL" data-lang-pt="SQL">SQL</li>
-            </ul>
+    <!-- Seção de Trabalhos -->
+    <section id="works">
+        <h2>Trabalhos</h2>
+        <div class="work-item">
+            <img src="static/me.jpg" alt="Imagem de trabalho">
+            <p>Trabalhei em vários projetos incríveis, como websites e aplicações móveis. Veja mais no meu GitHub.</p>
+            <a href="https://github.com/MarcioCosta75" target="_blank">Ver GitHub</a>
         </div>
     </section>
 
-    <section class="section" id="portfolio">
-        <div class="container">
-            <h2 data-lang-en="Portfolio" data-lang-pt="Portfólio">Portfolio</h2>
-            <p data-lang-en="Coming soon..." data-lang-pt="Em breve...">Coming soon...</p>
-        </div>
+    <!-- Seção de Blogs -->
+    <section id="blogs">
+        <h2>Blogs</h2>
+        <article>
+            <h3>O que é necessário para se tornar um desenvolvedor web?</h3>
+            <p>Web development, também conhecido como desenvolvimento de websites, envolve várias tarefas...</p>
+            <a href="#">Leia mais</a>
+        </article>
     </section>
 
-    <section class="section" id="testimonials">
-        <div class="container">
-            <h2 data-lang-en="Testimonials" data-lang-pt="Testemunhos">Testimonials</h2>
-            <p data-lang-en="Coming soon..." data-lang-pt="Em breve...">Coming soon...</p>
-        </div>
+    <!-- Seção de Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <form>
+            <label for="name">Seu nome</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Sua mensagem</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+        </form>
     </section>
 
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 data-lang-en="Contact" data-lang-pt="Contato">Contact</h2>
-            <p data-lang-en="You can reach me at marcio.jfp.costa@gmail.com or through the form below." data-lang-pt="Pode entrar em contato comigo em marcio.jfp.costa@gmail.com ou via formulário abaixo.">You can reach me at marcio.jfp.costa@gmail.com or through the form below.</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" data-lang-en="Your Name" data-lang-pt="Seu Nome">
-                <input type="email" placeholder="Your Email" data-lang-en="Your Email" data-lang-pt="Seu Email">
-                <textarea placeholder="Your Message" data-lang-en="Your Message" data-lang-pt="Sua Mensagem"></textarea>
-                <button type="submit" data-lang-en="Send Message" data-lang-pt="Enviar Mensagem">Send Message</button>
-            </form>
-        </div>
-    </section>
-
+    <!-- Rodapé -->
     <footer>
-        <p>© 2024 Mário Costa</p>
+        <p>&copy; 2024 Marcio Costa. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/MarcioCosta75" target="_blank">
+                <img src="static/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                <img src="static/logos/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
     </footer>
 
-    <script src="index_script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
