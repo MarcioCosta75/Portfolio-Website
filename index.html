@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header class="header-hero">
@@ -25,14 +27,14 @@
             </div>
             <ul class="social-links">
                 <li><a href="https://www.instagram.com/marcilioo75/" target="_blank">
-                    <img src="static/logos/instagram.png" alt="Instagram"> Instagram
-                </a></li>
+                        <img src="static/logos/instagram.png" alt="Instagram"> Instagram
+                    </a></li>
                 <li><a href="https://discord.com" target="_blank">
-                    <img src="static/logos/discord.png" alt="Discord"> Discord
-                </a></li>
+                        <img src="static/logos/discord.png" alt="Discord"> Discord
+                    </a></li>
                 <li><a href="https://github.com/MarcioCosta75" target="_blank">
-                    <img src="static/logos/github.png" alt="GitHub"> GitHub
-                </a></li>
+                        <img src="static/logos/github.png" alt="GitHub"> GitHub
+                    </a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +65,8 @@
                             <span>JS</span>
                             <span>REACT</span>
                         </div>
-                        <a href="static/cv/curriculum.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+                        <a href="static/cv/curriculum.pdf" class="download-btn" download><i class="fas fa-download"></i>
+                            Download CV</a>
                     </div>
                 </div>
                 <div class="hero-text">
@@ -75,12 +78,12 @@
                         <pre class="code-tag">&lt;/h1&gt;</pre>
                     </h1>
                     <p>
-                        <pre class="code-tag">&lt;p&gt;</pre>
-                        <br>
-                        I help businesses grow by crafting amazing web experiences.<br>
-                        If you're looking for a developer that likes to get stuff done,<br>
-                        <br>
-                        <pre class="code-tag">&lt;/p&gt;</pre>
+                    <pre class="code-tag">&lt;p&gt;</pre>
+                    <br>
+                    I help businesses grow by crafting amazing web experiences.<br>
+                    If you're looking for a developer that likes to get stuff done,<br>
+                    <br>
+                    <pre class="code-tag">&lt;/p&gt;</pre>
                     </p>
                     <a href="mailto:marcio.jfp.costa@gmail.com" class="contact-btn">
                         Let's Talk <img src="static/logos/emailButton.png" alt="email">
@@ -101,16 +104,22 @@
                     <p class="code-tag">&lt;p&gt;</p>
                     <p class="highlight code-tag">Hello!</p>
                     <p>
-                        My name is Marcio Costa and I specialize in web development that utilizes <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JS</span>, and <span class="highlight">REACT</span> etc.
+                        My name is Marcio Costa and I specialize in web development that utilizes <span
+                            class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span
+                            class="highlight">JS</span>, and <span class="highlight">REACT</span> etc.
                     </p>
                     <p>
-                        I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
+                        I am a highly motivated individual and eternal optimist dedicated to writing clear, concise,
+                        robust code that works. Striving to never stop learning and improving.
                     </p>
                     <p>
-                        When I'm not coding, I am writing <a href="#blogs" class="highlight link">blogs</a>, reading, or picking up some new hands-on art projects like <a href="#" class="highlight link">photography</a>.
+                        When I'm not coding, I am writing <a href="#blogs" class="highlight link">blogs</a>, reading, or
+                        picking up some new hands-on art projects like <a href="#"
+                            class="highlight link">photography</a>.
                     </p>
                     <p>
-                        I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                        I like to have my perspective and belief systems challenged so that I see the world through new
+                        eyes.
                     </p>
                     <p class="code-tag">&lt;/p&gt;</p>
                 </div>
@@ -163,45 +172,123 @@
     </section>
 
     <!-- Seção de Trabalhos -->
-    <section id="works">
-        <h2>Trabalhos</h2>
-        <div class="work-item">
-            <img src="static/me.jpg" alt="Imagem de trabalho">
-            <p>Trabalhei em vários projetos incríveis, como websites e aplicações móveis. Veja mais no meu GitHub.</p>
-            <a href="https://github.com/MarcioCosta75" target="_blank">Ver GitHub</a>
+    <section id="works" class="works-section">
+        <h2>Works</h2>
+        <p>I had the pleasure of working with these awesome projects</p>
+
+        <!-- Carousel Wrapper -->
+        <div class="carousel">
+            <!-- Botão da Esquerda -->
+            <button class="carousel-button-left gallery-prev">
+                <img src="static/others/buttonL.png" alt="Left">
+            </button>
+
+            <!-- Track do Carrossel -->
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide current-slide gallery-item">
+                        <img src="static/works/project1.png" alt="Project 1">
+                        <a href="https://project1.com" class="view-website">View Website</a>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide gallery-item">
+                        <img src="static/works/project2.jpg" alt="Project 2">
+                        <a href="https://project2.com" class="view-website">View Website</a>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide gallery-item">
+                        <img src="static/works/project3.png" alt="Project 3">
+                        <a href="https://project3.com" class="view-website">View Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão da Direita -->
+            <button class="carousel-button-right gallery-next">
+                <img src="static/others/buttonR.png" alt="Right">
+            </button>
         </div>
     </section>
 
     <!-- Seção de Blogs -->
-    <section id="blogs">
-        <h2>Blogs</h2>
-        <article>
-            <h3>O que é necessário para se tornar um desenvolvedor web?</h3>
-            <p>Web development, também conhecido como desenvolvimento de websites, envolve várias tarefas...</p>
-            <a href="#">Leia mais</a>
-        </article>
+    <section id="blogs" class="blogs-section">
+        <div class="blogs-container">
+            <div class="blogs-header">
+                <h2 class="blogs-title">Blogs</h2>
+                <p class="blogs-description">My thoughts on technology and business, welcome to subscribe</p>
+            </div>
+
+            <!-- Linha divisória superior -->
+            <div class="blog-divider"></div>
+
+            <!-- Blog Post Card -->
+            <div class="blog-post-card">
+                <img src="static/blogs/blogimage1.png" alt="Blog Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">What does it take to become a web developer?</h3>
+                    <p class="blog-excerpt">
+                        Web development, also known as website development, encompasses a variety of tasks and processes
+                        involved in creating websites for the internet...
+                    </p>
+                    <a href="#" class="read-more">Read More &gt;&gt;</a>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Web Developer</span>
+                        <span class="blog-meta">Text: Sinan</span>
+                        <span class="blog-meta">Date: 10.Oct.2023</span>
+                        <span class="blog-meta">Read: 1 Min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha divisória inferior -->
+            <div class="blog-divider"></div>
+
+            <!-- Botões -->
+            <div class="blogs-buttons">
+                <a href="#" class="view-more-btn">View More</a>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+        </div>
     </section>
 
     <!-- Seção de Contato -->
-    <section id="contact">
-        <h2>Contato</h2>
-        <form>
-            <label for="name">Seu nome</label>
-            <input type="text" id="name" name="name" required>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Contact</h2>
+            <p class="contact-description">I'm currently available for freelance work</p>
 
-            <label for="email">Seu e-mail</label>
-            <input type="email" id="email" name="email" required>
+            <p class="contact-message">Send Me A Message</p>
 
-            <label for="message">Sua mensagem</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Enviar mensagem</button>
-        </form>
+            <!-- Formulário de Contato -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <div class="form-field">
+                        <input type="text" id="name" name="name" placeholder="Your name *" required>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" id="email" name="email" placeholder="Your email *" required>
+                    </div>
+                </div>
+                <div class="form-field full-width">
+                    <textarea id="message" name="message" placeholder="Your message *" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
     </section>
+
+    <!-- Modal de Pop-up -->
+    <div id="popup-modal" class="popup-modal" style="display: none;">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="close-popup" class="close-popup-btn">OK</button>
+        </div>
+    </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Marcio Costa. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
         <div class="social-icons">
             <a href="https://www.instagram.com/marcilioo75/" target="_blank">
                 <img src="static/logos/instagram.png" alt="Instagram">
@@ -217,4 +304,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
