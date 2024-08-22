@@ -35,7 +35,7 @@ body {
 }
 
 .nav-links li a {
-    color: #12F7D6;
+    color: #FFFFFF;
     font-size: 18px;
     text-transform: capitalize;
     text-decoration: none;
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #FFFFFF;
+    color: #98FAEC;
 }
 
 .search-bar {
@@ -99,19 +99,40 @@ body {
 /* Seção Hero */
 .hero-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #1A1E23;
-    padding: 100px 20px;
+    padding: 10px 20px;
     color: #FFFFFF;
 }
 
 .hero-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     width: 90%;
     max-width: 1200px;
+}
+
+.hero-title {
+    text-align: center;
+}
+
+.hero-title h2 {
+    font-size: 80px;
+    color: #98FAEC;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+    margin-top: -10px;
 }
 
 .profile-card {
@@ -120,7 +141,6 @@ body {
     padding: 30px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     width: 40%;
-    position: relative;
 }
 
 .profile-image img {
@@ -187,9 +207,11 @@ body {
 }
 
 .hero-text {
-    width: 50%;
+    margin-top: -20px;
+    width: 55%;
     text-align: left;
     font-family: 'IBM Plex Mono', monospace;
+    margin-top: -60px;
 }
 
 .hero-text h1 {
@@ -204,35 +226,33 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.hero-title {
-    font-size: 30px;
-    color:  #98FAEC;
-    font-family: 'IBM Plex Mono', monospace;
-    margin-bottom: auto;
-}
-
 .hero-text p {
     font-size: 18px;
     line-height: 1.8;
     color: #FFFFFF;
     margin-bottom: 30px;
     font-family: 'IBM Plex Mono', monospace;
+    margin-top: -10px;
 }
 
 .contact-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #12F7D6;
-    padding: 12px 25px;
-    border-radius: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 35px;
+    font-size: 20px;
     transition: background-color 0.3s ease;
     font-family: 'IBM Plex Mono', monospace;
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .contact-btn img {
-    height: 35px;
+    height: 20px; /* Tornar o ícone menor */
+    margin-left: 10px; /* Adiciona espaçamento entre o texto e o ícone */
 }
 
 .contact-btn:hover {
@@ -274,6 +294,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 }
 
 .about-text {
@@ -285,11 +306,6 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     color: #FFFFFF;
     position: relative;
-}
-
-.code-tag {
-    color: #12F7D6;
-    font-weight: bold;
 }
 
 .highlight {
@@ -403,7 +419,7 @@ body {
 .tag-icon {
     width: 100px;
     height: auto;
-    margin: 0 auto; /* Alinha o ícone da tag ao centro */
+    margin: 0 auto;
 }
 
 /* Seção Trabalhos */
