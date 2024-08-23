@@ -1,0 +1,114 @@
+/* Estilos globais */
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background-color: #1A1E23;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Hero Styles */
+.header-hero {
+    background-color: #1A1E23;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #292F36;
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* Seção de Criação de Blogs */
+.create-blog-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.blog-container {
+    background-color: #292F36;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.blog-container h2 {
+    color: #12F7D6;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    text-align: left;
+    color: #98FAEC;
+    margin-bottom: 5px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1A1E23;
+    border: 1px solid #12F7D6;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.create-btn {
+    background-color: #12F7D6;
+    color: #1A1E23;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.create-btn:hover {
+    background-color: #98FAEC;
+}
+
+/* Mensagens de Sucesso e Erro */
+.success-message {
+    color: #00FF00;
+    font-size: 16px;
+}
+
+.error-message {
+    color: #FF6B6B;
+    font-size: 16px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #292F36;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 10px 0 0;
+}

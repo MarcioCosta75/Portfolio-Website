@@ -729,7 +729,7 @@ body {
 }
 
 .subscribe-btn:hover {
-    background-color: #12F7D6;
+    background-color: #98FAEC;
     color: #1A1E23;
 }
 
@@ -804,7 +804,7 @@ body {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #98FAEC;
+    color: #FFFFFF;
 }
 
 .contact-form textarea {
@@ -851,6 +851,8 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative; /* Certifica-se que o conteúdo seja corretamente posicionado */
+    z-index: 1100; /* Para garantir que o conteúdo esteja acima de outros elementos */
 }
 
 .popup-content p {
@@ -869,10 +871,82 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Para centralizar o botão OK */
 }
 
 .popup-btn:hover {
     background-color: #98FAEC;
+}
+
+/* Estilos para os botões do modal */
+.popup-btn, .popup-yes-no-btn {
+    background-color: #12F7D6;
+    color: #1A1E23;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-btn:hover, .popup-yes-no-btn:hover {
+    background-color: #98FAEC;
+}
+
+/* Espaçamento entre os botões Yes e No */
+#popup-yes-btn, #popup-no-btn {
+    margin: 0 10px; /* Adiciona 10px de margem entre os botões */
+}
+
+#popup-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões Yes e No */
+    gap: 20px; /* Adiciona um espaçamento entre os botões */
+}
+
+/* Estilos para o botão de voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #98FAEC;
+    color: #1A1E23;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.6s ease; /* Aumentamos o tempo da transição */
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top i {
+    margin-right: 5px;
+}
+
+.back-to-top span {
+    font-size: 14px;
+}
+
+/* Mostrar botão ao rolar */
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Efeito hover */
+.back-to-top:hover {
+    background-color: #12F7D6;
 }
 
 /* Rodapé */
@@ -883,10 +957,21 @@ footer {
 }
 
 footer .social-icons {
-    margin-top: 10px;
+    margin-bottom: 10px; /* Espaçamento abaixo dos ícones */
 }
 
 footer .social-icons img {
     height: 30px;
     margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 10px 0 0;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Blog - Backoffice</title>
+    <link rel="stylesheet" href="createBlog_styles.css">
+    <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header-hero">
+        <nav class="nav-hero">
+            <div class="logo">
+                <img src="static/logos/mc.png" alt="Logo Marcio Costa">
+            </div>
+        </nav>
+    </header>
+
+    <section class="create-blog-section">
+        <div class="blog-container">
+            <h2>Criar Blog</h2>
+            <form id="createBlogForm">
+                <div class="input-field">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" placeholder="Título do Blog" required>
+                </div>
+                <div class="input-field">
+                    <label for="author">Autor:</label>
+                    <input type="text" id="author" value="Márcio Costa" required>
+                </div>
+                <div class="input-field">
+                    <label for="theme">Tema:</label>
+                    <input type="text" id="theme" placeholder="Ex: Web Development" required>
+                </div>
+                <div class="input-field">
+                    <label for="readTime">Tempo de Leitura (Minutos):</label>
+                    <input type="number" id="readTime" placeholder="Tempo de Leitura" required>
+                </div>
+                <div class="input-field">
+                    <label for="introduction">Introdução:</label>
+                    <textarea id="introduction" rows="3" placeholder="Introdução do Blog" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="bodyContent">Conteúdo:</label>
+                    <textarea id="bodyContent" rows="6" placeholder="Conteúdo do Blog" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="conclusion">Conclusão:</label>
+                    <textarea id="conclusion" rows="3" placeholder="Conclusão do Blog" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="image1">Imagem 1 (URL):</label>
+                    <input type="url" id="image1" placeholder="URL da Imagem 1" required>
+                </div>
+                <div class="input-field">
+                    <label for="image2">Imagem 2 (URL):</label>
+                    <input type="url" id="image2" placeholder="URL da Imagem 2">
+                </div>
+                <div class="input-field">
+                    <label for="image3">Imagem 3 (URL):</label>
+                    <input type="url" id="image3" placeholder="URL da Imagem 3">
+                </div>
+                <button type="submit" class="create-btn">Criar Blog</button>
+            </form>
+            <div id="successMessage" class="success-message" style="display:none;"></div>
+            <div id="errorMessage" class="error-message" style="display:none;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/MarcioCosta75" target="_blank">
+                <img src="static/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                <img src="static/logos/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+    <script type="module" src="createBlog.js"></script> <!-- Script para criar o blog -->
+</body>
+
+</html>

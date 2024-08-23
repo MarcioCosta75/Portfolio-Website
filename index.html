@@ -18,7 +18,9 @@
                 <img src="static/logos/mc.png" alt="Logo Marcio Costa">
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
                 <li><a href="#blogs">Blogs</a></li>
             </ul>
             <div class="search-bar">
@@ -26,14 +28,14 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/marcilioo75/" target="_blank">
-                        <img src="static/logos/instagram.png" alt="Instagram"> Instagram
-                    </a></li>
-                <li><a href="https://discord.com" target="_blank">
-                        <img src="static/logos/discord.png" alt="Discord"> Discord
-                    </a></li>
                 <li><a href="https://github.com/MarcioCosta75" target="_blank">
                         <img src="static/logos/github.png" alt="GitHub"> GitHub
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                        <img src="static/logos/linkedin.png" alt="LinkedIn"> LinkedIn
+                    </a></li>
+                <li><a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                        <img src="static/logos/instagram.png" alt="Instagram"> Instagram
                     </a></li>
             </ul>
         </nav>
@@ -65,7 +67,9 @@
                             <span>JS</span>
                             <span>REACT</span>
                         </div>
-                        <a href="static/cv/curriculum.pdf" class="download-btn" download><i class="fas fa-download"></i>
+                        <!-- Botão de Download CV -->
+                        <a href="static/cv/curriculum.pdf" class="download-btn" download id="download-cv"><i
+                                class="fas fa-download"></i>
                             Download CV</a>
                     </div>
                 </div>
@@ -85,7 +89,7 @@
                     <br>
                     <pre class="code-tag">&lt;/p&gt;</pre>
                     </p>
-                    <a href="mailto:marcio.jfp.costa@gmail.com" class="contact-btn">
+                    <a href="#contact" class="contact-btn">
                         Let's Talk <img src="static/logos/emailButton.png" alt="email">
                     </a>
                 </div>
@@ -234,8 +238,8 @@
                     <a href="#" class="read-more">Read More &gt;&gt;</a>
                     <div class="blog-tags">
                         <span class="blog-tag">Web Developer</span>
-                        <span class="blog-meta">Text: Sinan</span>
-                        <span class="blog-meta">Date: 10.Oct.2023</span>
+                        <span class="blog-meta">Text: Márcio</span>
+                        <span class="blog-meta">Date: 22.Aug.2024</span>
                         <span class="blog-meta">Read: 1 Min</span>
                     </div>
                 </div>
@@ -246,7 +250,7 @@
 
             <!-- Botões -->
             <div class="blogs-buttons">
-                <a href="#" class="view-more-btn">View More</a>
+                <a href="blogs.html" class="view-more-btn">View More</a>
                 <a href="#" class="subscribe-btn">Subscribe</a>
             </div>
         </div>
@@ -261,7 +265,8 @@
             <p class="contact-message">Send Me A Message</p>
 
             <!-- Formulário de Contato -->
-            <form id="contactForm" class="contact-form">
+            <form id="contact-form" class="contact-form">
+                <!-- Campos do Formulário -->
                 <div class="form-group">
                     <div class="form-field">
                         <input type="text" id="name" name="name" placeholder="Your name *" required>
@@ -282,24 +287,34 @@
     <div id="popup-modal" class="popup-modal" style="display: none;">
         <div class="popup-content">
             <p id="popup-message"></p>
-            <button id="close-popup" class="close-popup-btn">OK</button>
+            <div id="popup-buttons">
+                <button id="popup-yes-btn" class="popup-yes-no-btn">Yes</button>
+                <button id="popup-no-btn" class="popup-yes-no-btn">No</button>
+            </div>
+            <button id="close-popup" class="popup-btn">OK</button>
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+        <span>TO TOP</span>
+    </a>
+
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
         <div class="social-icons">
-            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
-                <img src="static/logos/instagram.png" alt="Instagram">
-            </a>
             <a href="https://github.com/MarcioCosta75" target="_blank">
                 <img src="static/logos/github.png" alt="GitHub">
             </a>
             <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
                 <img src="static/logos/linkedin.png" alt="LinkedIn">
             </a>
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
         </div>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

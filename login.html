@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Backoffice</title>
+    <link rel="stylesheet" href="login_styles.css">
+    <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-hero">
+        <nav class="nav-hero">
+            <div class="logo">
+                <img src="static/logos/mc.png" alt="Logo Marcio Costa">
+            </div>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-field password-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <img id="togglePassword" class="password-icon" src="static/others/hidden.png" alt="Toggle Password Visibility">
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div id="loginError" class="error-message" style="display:none;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/MarcioCosta75" target="_blank">
+                <img src="static/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                <img src="static/logos/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script type="module" src="login_script.js"></script> <!-- Use "module" type -->
+</body>
+
+</html>

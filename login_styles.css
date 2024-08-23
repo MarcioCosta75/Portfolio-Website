@@ -1,0 +1,126 @@
+/* login_styles.css */
+
+/* Estilos globais */
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background-color: #1A1E23;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Hero Styles */
+.header-hero {
+    background-color: #1A1E23;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center; /* Centraliza o logo */
+    align-items: center;
+    border-bottom: 1px solid #292F36;
+}
+
+.nav-hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Centraliza o conteúdo */
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-container {
+    background-color: #292F36;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Limita a largura do card */
+    width: 100%;
+}
+
+.login-container h2 {
+    color: #12F7D6;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    background-color: #1A1E23;
+    border: 1px solid #12F7D6;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding esteja dentro do input */
+}
+
+/* Estilo de Campo de Senha */
+.password-field {
+    position: relative;
+}
+
+.password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #12F7D6;
+    color: #1A1E23;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background-color: #98FAEC;
+}
+
+/* Estilos de Mensagens de Erro */
+.error-message {
+    color: #FF6B6B;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #292F36;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 10px 0 0;
+}

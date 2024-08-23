@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs - Backoffice</title>
+    <link rel="stylesheet" href="listBlogs_styles.css">
+    <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-hero">
+        <nav class="nav-hero">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+            <div class="logo">
+                <img src="static/logos/mc.png" alt="Marcio Costa Logo">
+            </div>
+        </nav>
+    </header>
+
+    <section class="blogs-section">
+        <div class="section-header">
+            <h2>My Blogs</h2>
+            <a href="createBlog.html" class="add-blog-btn">New Blog</a>
+        </div>
+        <div class="blogs-container">
+            <section id="blogsSection">
+                <div id="blogsContainer"></div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/MarcioCosta75" target="_blank">
+                <img src="static/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                <img src="static/logos/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK and JS -->
+    <script type="module" src="listBlogs.js"></script> <!-- Changed to module -->
+</body>
+
+</html>
