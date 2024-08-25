@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog Post</title>
+    <link rel="stylesheet" href="editBlog_styles.css">
+    <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header-hero">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="static/logos/mc.png" alt="Marcio Costa Logo">
+            </div>
+            <div class="nav-links">
+                <a href="listBlogs.html">My Blogs</a>
+            </div>
+        </div>
+    </header>    
+
+    <section class="edit-blog-section">
+        <h1>Edit Blog Post</h1>
+        <form id="editBlogForm">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Blog Title">
+
+            <label for="introduction">Introduction</label>
+            <textarea id="introduction" placeholder="Introduction"></textarea>
+
+            <label for="bodyContent">Body Content</label>
+            <textarea id="bodyContent" placeholder="Body Content"></textarea>
+
+            <label for="conclusion">Conclusion</label>
+            <textarea id="conclusion" placeholder="Conclusion"></textarea>
+
+            <div class="image-inputs">
+                <div class="image-input">
+                    <label for="image1URL">Image 1 URL</label>
+                    <input type="text" id="image1URL" placeholder="Image 1 URL">
+                    <img id="image1Preview" src="static/images/default-image.png" alt="Image 1 Preview">
+                </div>
+                <div class="image-input">
+                    <label for="image2URL">Image 2 URL</label>
+                    <input type="text" id="image2URL" placeholder="Image 2 URL">
+                    <img id="image2Preview" src="static/images/default-image.png" alt="Image 2 Preview">
+                </div>
+                <div class="image-input">
+                    <label for="image3URL">Image 3 URL</label>
+                    <input type="text" id="image3URL" placeholder="Image 3 URL">
+                    <img id="image3Preview" src="static/images/default-image.png" alt="Image 3 Preview">
+                </div>
+            </div>
+
+            <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/MarcioCosta75" target="_blank">
+                <img src="static/logos/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/marcio-costa-377102231/" target="_blank">
+                <img src="static/logos/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/marcilioo75/" target="_blank">
+                <img src="static/logos/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="editBlog_script.js"></script>
+</body>
+
+</html>
