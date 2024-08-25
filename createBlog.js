@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
 import { getFirestore, doc, getDoc, updateDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,6 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
 // Default image URL if none is provided (local image)
 const defaultImageURL = "static/images/default-image.png";
@@ -76,14 +78,24 @@ document.getElementById('createBlogForm').addEventListener('submit', async funct
         date: new Date()
     };
 
-    const email = "marcio.costa@dengun.com"; // Example, retrieve dynamically in a real app
+    // Get the current user from Firebase Authentication
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            const email = user.email; // Get the email of the logged-in user
 
-    try {
-        await createBlogPost(email, post);
-    } catch (error) {
-        console.error('Error creating post:', error);
-        document.getElementById('successMessage').style.display = 'none';
-        document.getElementById('errorMessage').textContent = 'Error creating post. Please try again later.';
-        document.getElementById('errorMessage').style.display = 'block';
-    }
+            try {
+                await createBlogPost(email, post);
+            } catch (error) {
+                console.error('Error creating post:', error);
+                document.getElementById('successMessage').style.display = 'none';
+                document.getElementById('errorMessage').textContent = 'Error creating post. Please try again later.';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        } else {
+            // Handle if the user is not authenticated
+            console.error('User is not logged in');
+            document.getElementById('errorMessage').textContent = 'You must be logged in to create a post.';
+            document.getElementById('errorMessage').style.display = 'block';
+        }
+    });
 });

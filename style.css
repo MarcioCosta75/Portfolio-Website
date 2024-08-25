@@ -640,68 +640,89 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Estilo para o cartão de blog */
-.blog-post-card {
+/* Estilos para o layout de cartão de blog atualizado e otimizado */
+#dynamic-blogs .blog-post-card {
     display: flex;
-    background-color: #2D3440;
+    background-color: #1A1E23;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     margin: 40px 0;
     font-family: 'IBM Plex Mono', monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.blog-image {
-    width: 30%;
+#dynamic-blogs .blog-post-card:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+#dynamic-blogs .blog-image {
+    width: 150px; /* Tamanho fixo da imagem */
+    height: 150px; /* Altura fixa para garantir o alinhamento */
+    object-fit: cover; /* Para garantir que a imagem se ajuste corretamente */
     border-radius: 10px;
     margin-right: 20px;
 }
 
-.blog-content {
+#dynamic-blogs .blog-content {
     text-align: left;
-    font-family: 'IBM Plex Mono', monospace;
+    flex-grow: 1;
 }
 
-.blog-title {
+#dynamic-blogs .blog-title {
     font-size: 24px;
     color: #12F7D6;
-    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 10px;
 }
 
-.blog-excerpt {
-    margin: 15px 0;
+#dynamic-blogs .blog-excerpt {
+    margin: 10px 0;
     color: #FFFFFF;
-    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.read-more {
+#dynamic-blogs .read-more {
+    display: inline-block;
     color: #12F7D6;
     text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: color 0.3s ease;
 }
 
-.blog-tags {
-    margin-top: 10px;
-    font-family: 'IBM Plex Mono', monospace;
+#dynamic-blogs .read-more:hover {
+    color: #98FAEC;
 }
 
-.blog-tag,
-.blog-meta {
+#dynamic-blogs .blog-tags {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#dynamic-blogs .blog-tag,
+#dynamic-blogs .blog-meta {
     display: inline-block;
     background-color: #43454D;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 15px;
     color: #FFFFFF;
-    font-size: 14px;
-    margin-right: 10px;
+    margin-right: 8px;
+    margin-top: 5px;
 }
 
+/* Blog Divider */
 .blog-divider {
     width: 100%;
     height: 1px;
-    background-color: #FFFFFF;
-    margin: 20px 0;
+    background-color: #43454D;
+    margin: 30px 0;
 }
+
 
 /* Botões de Blogs */
 .blogs-buttons {
