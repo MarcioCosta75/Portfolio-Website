@@ -16,10 +16,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Função para criar um novo post
+// Default image URL if none is provided (local image)
+const defaultImageURL = "static/images/default-image.png";
+
+// Function to create a new blog post
 async function createBlogPost(email, post) {
-    const userDoc = doc(db, "blogs", email);
-    const docSnap = await getDoc(userDoc);
+    const userDocRef = doc(db, "blogs", email);
+    const docSnap = await getDoc(userDocRef);
 
     if (docSnap.exists()) {
         const data = docSnap.data();
@@ -29,32 +32,58 @@ async function createBlogPost(email, post) {
 
         posts[newPostKey] = post;
 
-        await updateDoc(userDoc, { posts });
-        alert('Post created successfully');
+        await updateDoc(userDocRef, { posts });
+    } else {
+        const posts = {
+            post1: post
+        };
+        await setDoc(userDocRef, { posts });
     }
+
+    alert('Blog post created successfully!');
+    document.getElementById('successMessage').style.display = 'block';
+    document.getElementById('errorMessage').style.display = 'none';
+    
+    // Redirect to blog listing page after creation
+    window.location.href = 'listBlogs.html';
 }
 
-// Exemplo de uso após o formulário ser submetido
-document.getElementById('blogForm').addEventListener('submit', async function (e) {
+// Event listener for blog creation form submission
+document.getElementById('createBlogForm').addEventListener('submit', async function (e) {
     e.preventDefault();
+
+    // Get image URLs, use default image if none is provided
+    const image1 = document.getElementById('image1').value || defaultImageURL;
+    const image2 = document.getElementById('image2').value || defaultImageURL;
+    const image3 = document.getElementById('image3').value || defaultImageURL;
+
+    // Create the post object
     const post = {
-        title: document.getElementById('title').value,
+        postStructure: {
+            title: document.getElementById('title').value,
+            introduction: document.getElementById('introduction').value,
+            content: document.getElementById('bodyContent').value,
+            conclusion: document.getElementById('conclusion').value,
+        },
         author: document.getElementById('author').value,
         theme: document.getElementById('theme').value,
         readTime: parseInt(document.getElementById('readTime').value),
-        introduction: document.getElementById('introduction').value,
-        bodyContent: document.getElementById('bodyContent').value,
-        conclusion: document.getElementById('conclusion').value,
         images: {
-            image1: document.getElementById('image1').value,
-            image2: document.getElementById('image2').value,
-            image3: document.getElementById('image3').value,
+            image1: image1,
+            image2: image2,
+            image3: image3,
         },
         date: new Date()
     };
 
-    // Recupera o email do usuário logado (você pode armazenar em localStorage após login)
-    const email = "marcio.costa@dengun.com"; // Exemplo, recupere dinamicamente o email
+    const email = "marcio.costa@dengun.com"; // Example, retrieve dynamically in a real app
 
-    await createBlogPost(email, post);
+    try {
+        await createBlogPost(email, post);
+    } catch (error) {
+        console.error('Error creating post:', error);
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('errorMessage').textContent = 'Error creating post. Please try again later.';
+        document.getElementById('errorMessage').style.display = 'block';
+    }
 });

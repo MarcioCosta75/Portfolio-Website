@@ -1,4 +1,4 @@
-/* Estilos globais */
+/* Global Styles */
 body {
     font-family: 'IBM Plex Mono', sans-serif;
     background-color: #1A1E23;
@@ -15,18 +15,51 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #292F36;
+    height: 70px;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo img {
     height: 70px;
 }
 
-/* Seção de Criação de Blogs */
+.nav-links {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', sans-serif;
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #98FAEC;
+}
+
+/* Blog Creation Section */
 .create-blog-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    padding: 50px 0;
+    min-height: calc(100vh - 120px);
 }
 
 .blog-container {
@@ -78,24 +111,35 @@ body {
     font-size: 16px;
     width: 100%;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .create-btn:hover {
     background-color: #98FAEC;
 }
 
-/* Mensagens de Sucesso e Erro */
-.success-message {
-    color: #00FF00;
+/* Success and Error Messages */
+.success-message,
+.error-message {
+    display: none;
     font-size: 16px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #00FF00;
+    color: #1A1E23;
 }
 
 .error-message {
-    color: #FF6B6B;
-    font-size: 16px;
+    background-color: #FF6B6B;
+    color: #1A1E23;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
     background-color: #292F36;
     padding: 20px;

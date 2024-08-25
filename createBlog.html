@@ -1,70 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Blog - Backoffice</title>
+    <title>Create Blog - Backoffice</title>
     <link rel="stylesheet" href="createBlog_styles.css">
     <link rel="icon" href="static/logos/mc.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="header-hero">
-        <nav class="nav-hero">
+        <div class="nav-container">
             <div class="logo">
-                <img src="static/logos/mc.png" alt="Logo Marcio Costa">
+                <img src="static/logos/mc.png" alt="Marcio Costa Logo">
             </div>
-        </nav>
-    </header>
+            <div class="nav-links">
+                <a href="listBlogs.html">My Blogs</a>
+            </div>
+        </div>
+    </header>    
 
     <section class="create-blog-section">
         <div class="blog-container">
-            <h2>Criar Blog</h2>
-            <form id="createBlogForm">
+            <h2>Create Blog</h2>
+            <form id="createBlogForm"> <!-- Certifique-se de que o ID esteja correto -->
                 <div class="input-field">
-                    <label for="title">Título:</label>
-                    <input type="text" id="title" placeholder="Título do Blog" required>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" placeholder="Blog Title" required>
                 </div>
                 <div class="input-field">
-                    <label for="author">Autor:</label>
+                    <label for="author">Author:</label>
                     <input type="text" id="author" value="Márcio Costa" required>
                 </div>
                 <div class="input-field">
-                    <label for="theme">Tema:</label>
-                    <input type="text" id="theme" placeholder="Ex: Web Development" required>
+                    <label for="theme">Theme:</label>
+                    <input type="text" id="theme" placeholder="E.g., Web Development" required>
                 </div>
                 <div class="input-field">
-                    <label for="readTime">Tempo de Leitura (Minutos):</label>
-                    <input type="number" id="readTime" placeholder="Tempo de Leitura" required>
+                    <label for="readTime">Reading Time (Minutes):</label>
+                    <input type="number" id="readTime" placeholder="Reading Time" required>
                 </div>
                 <div class="input-field">
-                    <label for="introduction">Introdução:</label>
-                    <textarea id="introduction" rows="3" placeholder="Introdução do Blog" required></textarea>
+                    <label for="introduction">Introduction:</label>
+                    <textarea id="introduction" rows="3" placeholder="Blog Introduction" required></textarea>
                 </div>
                 <div class="input-field">
-                    <label for="bodyContent">Conteúdo:</label>
-                    <textarea id="bodyContent" rows="6" placeholder="Conteúdo do Blog" required></textarea>
+                    <label for="bodyContent">Content:</label>
+                    <textarea id="bodyContent" rows="6" placeholder="Blog Content" required></textarea>
                 </div>
                 <div class="input-field">
-                    <label for="conclusion">Conclusão:</label>
-                    <textarea id="conclusion" rows="3" placeholder="Conclusão do Blog" required></textarea>
+                    <label for="conclusion">Conclusion:</label>
+                    <textarea id="conclusion" rows="3" placeholder="Blog Conclusion" required></textarea>
                 </div>
                 <div class="input-field">
-                    <label for="image1">Imagem 1 (URL):</label>
-                    <input type="url" id="image1" placeholder="URL da Imagem 1" required>
+                    <label for="image1">Image 1 (URL):</label>
+                    <input type="url" id="image1" placeholder="URL of Image 1">
                 </div>
                 <div class="input-field">
-                    <label for="image2">Imagem 2 (URL):</label>
-                    <input type="url" id="image2" placeholder="URL da Imagem 2">
+                    <label for="image2">Image 2 (URL):</label>
+                    <input type="url" id="image2" placeholder="URL of Image 2">
                 </div>
                 <div class="input-field">
-                    <label for="image3">Imagem 3 (URL):</label>
-                    <input type="url" id="image3" placeholder="URL da Imagem 3">
+                    <label for="image3">Image 3 (URL):</label>
+                    <input type="url" id="image3" placeholder="URL of Image 3">
                 </div>
-                <button type="submit" class="create-btn">Criar Blog</button>
+                <button type="submit" class="create-btn">Create Blog</button>
             </form>
-            <div id="successMessage" class="success-message" style="display:none;"></div>
+            <div id="successMessage" class="success-message" style="display:none;">Blog created successfully!</div>
             <div id="errorMessage" class="error-message" style="display:none;"></div>
         </div>
     </section>
@@ -86,7 +89,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
-    <script type="module" src="createBlog.js"></script> <!-- Script para criar o blog -->
+    <script src="createBlog.js" type="module"></script>
 </body>
 
 </html>
