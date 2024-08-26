@@ -21,8 +21,8 @@
                 <li><a href="index.html">Home</a></li>
             </ul>
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
             </div>
             <ul class="social-links">
                 <li><a href="https://github.com/MarcioCosta75" target="_blank">
@@ -45,18 +45,15 @@
             <label for="filter-theme">Filter by Theme:</label>
             <select id="filter-theme">
                 <option value="all">All Themes</option>
-                <option value="web-development">Web Development</option>
-                <option value="design">Design</option>
-                <!-- Outros temas -->
+                <!-- Adicione mais opções dinamicamente via JavaScript -->
             </select>
 
             <label for="filter-author">Filter by Author:</label>
             <select id="filter-author">
                 <option value="all">All Authors</option>
-                <option value="marcio">Marcio Costa</option>
-                <!-- Certifique-se de que o valor seja igual ao nome do autor no array -->
-                <option value="guest">Guest Author</option>
+                <!-- Adicione mais opções dinamicamente via JavaScript -->
             </select>
+            
             <label for="filter-date">Filter by Date:</label>
             <input type="date" id="filter-date">
         </div>
@@ -65,7 +62,7 @@
     <!-- Seção de Blogs -->
     <section class="blogs-section">
         <div class="blogs-container" id="blogs-list">
-            <!-- Blog cards serão renderizados aqui -->
+            <!-- Blog cards serão renderizados aqui dinamicamente -->
         </div>
     </section>
 
@@ -85,7 +82,8 @@
         <p>&copy; 2024 Marcio Costa. All rights reserved.</p>
     </footer>
 
-    <script src="blog_script.js"></script> <!-- Link para o JS dos blogs -->
+    <!-- Inclua o arquivo JavaScript -->
+    <script type="module" src="blog_script.js"></script>
 </body>
 
 </html>

@@ -104,6 +104,12 @@ body {
     text-align: center;
 }
 
+.filter-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
 .filters {
     display: flex;
     justify-content: center;
@@ -111,7 +117,8 @@ body {
     margin-top: 20px;
 }
 
-.filters select, .filters input {
+.filters select,
+.filters input {
     padding: 10px;
     background-color: #1A1E23;
     border: 1px solid #12F7D6;
@@ -123,7 +130,7 @@ body {
 /* Seção de Blogs */
 .blogs-section {
     padding: 40px 20px;
-    background-color: #1A1E23;
+    background-color: #292F36;
 }
 
 .blogs-container {
@@ -131,73 +138,133 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-}
-
-/* Estilos dos Cards de Blog */
-.blog-card {
-    background-color: #2D3440;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: left;
-    color: #FFFFFF;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    gap: 20px;
     max-width: 1000px;
-    margin-bottom: 40px;
-    align-items: center;
+    margin: 0 auto;
 }
 
-.blog-card img {
-    width: 30%;
+/* Blog Divider - Linha acima do primeiro post */
+#blogs-list::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #43454D;
+    margin-bottom: 5px;
+}
+
+/* Estilos dos Cartões de Blog */
+.blog-post-card {
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    background-color: #1A1E23;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 40px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos das imagens */
+.blog-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
-.blog-card .blog-content {
-    width: 70%;
+/* Conteúdo dos posts */
+.blog-content {
+    text-align: left;
+    flex-grow: 1;
 }
 
-.blog-card h3 {
+/* Título */
+.blog-title {
     font-size: 24px;
     color: #12F7D6;
     margin-bottom: 10px;
 }
 
-.blog-card p {
-    font-size: 16px;
-    color: #E0E0E0;
-}
-
-.blog-meta {
-    font-size: 14px;
-    margin-top: 15px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.blog-meta span {
-    background-color: #43454D;
-    padding: 5px 10px;
-    border-radius: 10px;
+/* Trecho do post */
+.blog-excerpt {
+    margin: 10px 0;
     color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
+/* Link "Read More" */
 .read-more {
+    display: inline-block;
     color: #12F7D6;
     text-decoration: none;
     font-size: 16px;
     margin-top: 15px;
-    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 .read-more:hover {
     color: #98FAEC;
 }
 
+/* Cartões da metadata */
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.blog-tag,
+.blog-meta {
+    display: inline-block;
+    background-color: #43454D;
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+/* Divisor entre posts */
+.blog-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #43454D;
+    margin: 5px 0;
+}
+
+/* Ajuste no design responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .blog-post-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-content {
+        width: 100%;
+    }
+}
+
+
 /* Rodapé */
 footer {
-    background-color: #292F36;
+    background-color: #1A1E23;
     padding: 20px;
     text-align: center;
 }
